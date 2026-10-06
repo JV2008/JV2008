@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="finBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="finAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <pattern id="finGrid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <path d="M 18 0 L 0 0 0 18" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.35" />
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="450" height="150" rx="12" fill="url(#finBg)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+  <rect width="450" height="150" rx="12" fill="url(#finGrid)" />
+
+  <!-- Top Badge -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="100" height="20" rx="10" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="0.8" />
+    <circle cx="10" cy="10" r="3" fill="#38bdf8" />
+    <text x="20" y="14" fill="#bae6fd" font-size="9.5" font-weight="700" class="mono">FULL-STACK</text>
+
+    <rect x="110" y="0" width="108" height="20" rx="10" fill="#1e1b4b" fill-opacity="0.5" stroke="#6366f1" stroke-width="0.8" />
+    <text x="120" y="14" fill="#c7d2fe" font-size="9.5" font-weight="600" class="mono">PRODUCTION LIVE</text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(20, 68)">
+    <text x="0" y="0" fill="#f8fafc" font-size="19" font-weight="800" class="sans">App Finanças Pessoais</text>
+    <text x="0" y="20" fill="#94a3b8" font-size="11.5" font-weight="400" class="sans">Gestão orçamentária com modelagem 3FN &amp; Next.js 15</text>
+  </g>
+
+  <!-- Tags -->
+  <g transform="translate(20, 118)">
+    <rect x="0" y="0" width="82" height="18" rx="4" fill="#1e293b" />
+    <text x="41" y="12" fill="#38bdf8" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">Next.js 15</text>
+
+    <rect x="90" y="0" width="84" height="18" rx="4" fill="#1e293b" />
+    <text x="132" y="12" fill="#818cf8" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">TypeScript</text>
+
+    <rect x="182" y="0" width="112" height="18" rx="4" fill="#1e293b" />
+    <text x="238" y="12" fill="#a855f7" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">Neon Serverless</text>
+
+    <rect x="302" y="0" width="94" height="18" rx="4" fill="#1e293b" />
+    <text x="349" y="12" fill="#ec4899" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">Upstash Redis</text>
+  </g>
+
+  <!-- Mini Chart Graphic on Right -->
+  <g transform="translate(390, 48)" opacity="0.85">
+    <path d="M 0 35 L 12 25 L 24 30 L 36 12 L 48 5" fill="none" stroke="url(#finAccent)" stroke-width="2.2" stroke-linecap="round" />
+    <circle cx="48" cy="5" r="3" fill="#38bdf8" />
+  </g>
+</svg>

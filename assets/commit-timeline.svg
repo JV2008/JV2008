@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="tlBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0d1326" />
+      <stop offset="100%" stop-color="#080c18" />
+    </linearGradient>
+
+    <!-- Glowing Path Gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="28%" stop-color="#6366f1" />
+      <stop offset="60%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Node Glow Gradients -->
+    <radialGradient id="nodeGlow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nodeGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nodeGlow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nodeGlow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nodeGlow5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="tlGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+
+    <style>
+      .pulse-ring {
+        animation: ringPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        transform-origin: center;
+      }
+      .beam-flow {
+        stroke-dasharray: 12 180;
+        animation: beamMove 5s linear infinite;
+      }
+      .node-pulse-5 {
+        animation: activePulse 2s ease-in-out infinite alternate;
+      }
+      @keyframes ringPulse {
+        0%, 100% { r: 12; opacity: 0.3; }
+        50% { r: 18; opacity: 0.8; }
+      }
+      @keyframes activePulse {
+        0% { filter: drop-shadow(0 0 2px #ec4899); }
+        100% { filter: drop-shadow(0 0 10px #ec4899); }
+      }
+      @keyframes beamMove {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -760; }
+      }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="900" height="450" rx="16" fill="url(#tlBg)" />
+  <rect width="900" height="450" rx="16" fill="url(#tlGrid)" />
+  <rect x="1.5" y="1.5" width="897" height="447" rx="15" fill="none" stroke="#334155" stroke-width="1.2" stroke-opacity="0.6" />
+
+  <!-- Timeline Header -->
+  <g transform="translate(48, 38)">
+    <rect x="0" y="0" width="168" height="24" rx="12" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" stroke-opacity="0.5" />
+    <text x="84" y="16" fill="#a5b4fc" font-size="11" font-weight="700" text-anchor="middle" class="mono">VERIFIED REPO DATA</text>
+    <text x="180" y="17" fill="#64748b" font-size="11" font-weight="500" class="mono">120+ REPOSITORIES // 2024 → 2026</text>
+
+    <text x="0" y="48" fill="#f8fafc" font-size="20" font-weight="800" class="sans">
+      Technical Evolution &amp; Commit History
+    </text>
+    <text x="0" y="68" fill="#94a3b8" font-size="12.5" font-weight="400" class="sans">
+      Da lógica algorítmica e POO à engenharia full-stack, deploys em nuvem e orquestração de IA
+    </text>
+  </g>
+
+  <!-- Main Timeline Vector Path -->
+  <g transform="translate(60, 180)">
+    <!-- Base Timeline Path Glow & Track -->
+    <path d="M 30 0 L 750 0" stroke="#1e293b" stroke-width="6" stroke-linecap="round" />
+    <path d="M 30 0 L 750 0" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 30 0 L 750 0" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-opacity="0.85" class="beam-flow" />
+
+    <!-- ==================== STAGE 1: 2024 Q1-Q2 ==================== -->
+    <g transform="translate(40, 0)">
+      <!-- Node -->
+      <circle cx="0" cy="0" r="16" fill="url(#nodeGlow1)" />
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+      <circle cx="0" cy="0" r="3" fill="#38bdf8" />
+      
+      <!-- Top Date Card -->
+      <rect x="-65" y="-56" width="130" height="24" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.8" />
+      <text x="0" y="-40" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle" class="mono">FEB 2024 — JUN 2024</text>
+      
+      <!-- Bottom Details Card -->
+      <g transform="translate(-70, 24)">
+        <rect x="0" y="0" width="140" height="185" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" />
+        <rect x="0" y="0" width="140" height="3" rx="1.5" fill="#38bdf8" />
+        
+        <text x="10" y="22" fill="#e2e8f0" font-size="12" font-weight="700" class="sans">Foundations</text>
+        <text x="10" y="38" fill="#94a3b8" font-size="10.5" font-weight="500" class="sans">&amp; Algorithmic Logic</text>
+        
+        <line x1="10" y1="48" x2="130" y2="48" stroke="#1e293b" stroke-width="1" />
+        
+        <text x="10" y="66" fill="#64748b" font-size="9" font-weight="700" class="mono">KEY TOPICS:</text>
+        <text x="10" y="82" fill="#cbd5e1" font-size="10" class="sans">• Java Fundamentals</text>
+        <text x="10" y="98" fill="#cbd5e1" font-size="10" class="sans">• Arrays &amp; Matrices</text>
+        <text x="10" y="114" fill="#cbd5e1" font-size="10" class="sans">• Data Structures</text>
+        <text x="10" y="130" fill="#cbd5e1" font-size="10" class="sans">• Git &amp; GitHub Core</text>
+
+        <rect x="8" y="146" width="124" height="24" rx="4" fill="#1e293b" fill-opacity="0.6" />
+        <text x="70" y="162" fill="#38bdf8" font-size="9" font-weight="600" text-anchor="middle" class="mono">15+ Logic Repos</text>
+      </g>
+    </g>
+
+    <!-- ==================== STAGE 2: 2024 Q3-Q4 ==================== -->
+    <g transform="translate(210, 0)">
+      <!-- Node -->
+      <circle cx="0" cy="0" r="16" fill="url(#nodeGlow2)" />
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#6366f1" stroke-width="3" />
+      <circle cx="0" cy="0" r="3" fill="#6366f1" />
+
+      <!-- Top Date Card -->
+      <rect x="-65" y="-56" width="130" height="24" rx="6" fill="#0f172a" stroke="#6366f1" stroke-width="1" stroke-opacity="0.8" />
+      <text x="0" y="-40" fill="#a5b4fc" font-size="10" font-weight="700" text-anchor="middle" class="mono">JUL 2024 — DEC 2024</text>
+
+      <!-- Bottom Details Card -->
+      <g transform="translate(-70, 24)">
+        <rect x="0" y="0" width="140" height="185" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" />
+        <rect x="0" y="0" width="140" height="3" rx="1.5" fill="#6366f1" />
+
+        <text x="10" y="22" fill="#e2e8f0" font-size="12" font-weight="700" class="sans">Java OOP &amp; SQL</text>
+        <text x="10" y="38" fill="#94a3b8" font-size="10.5" font-weight="500" class="sans">Architecture &amp; Web</text>
+
+        <line x1="10" y1="48" x2="130" y2="48" stroke="#1e293b" stroke-width="1" />
+
+        <text x="10" y="66" fill="#64748b" font-size="9" font-weight="700" class="mono">KEY TOPICS:</text>
+        <text x="10" y="82" fill="#cbd5e1" font-size="10" class="sans">• Encapsulation &amp; POO</text>
+        <text x="10" y="98" fill="#cbd5e1" font-size="10" class="sans">• Polymorphism &amp; Enums</text>
+        <text x="10" y="114" fill="#cbd5e1" font-size="10" class="sans">• SQL Relational DB</text>
+        <text x="10" y="130" fill="#cbd5e1" font-size="10" class="sans">• Semantic HTML5/CSS</text>
+
+        <rect x="8" y="146" width="124" height="24" rx="4" fill="#1e293b" fill-opacity="0.6" />
+        <text x="70" y="162" fill="#a5b4fc" font-size="9" font-weight="600" text-anchor="middle" class="mono">Arena dos Heróis</text>
+      </g>
+    </g>
+
+    <!-- ==================== STAGE 3: 2025 Q1-Q2 ==================== -->
+    <g transform="translate(380, 0)">
+      <!-- Node -->
+      <circle cx="0" cy="0" r="16" fill="url(#nodeGlow3)" />
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#8b5cf6" stroke-width="3" />
+      <circle cx="0" cy="0" r="3" fill="#8b5cf6" />
+
+      <!-- Top Date Card -->
+      <rect x="-65" y="-56" width="130" height="24" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.8" />
+      <text x="0" y="-40" fill="#c4b5fd" font-size="10" font-weight="700" text-anchor="middle" class="mono">JAN 2025 — JUN 2025</text>
+
+      <!-- Bottom Details Card -->
+      <g transform="translate(-70, 24)">
+        <rect x="0" y="0" width="140" height="185" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" />
+        <rect x="0" y="0" width="140" height="3" rx="1.5" fill="#8b5cf6" />
+
+        <text x="10" y="22" fill="#e2e8f0" font-size="12" font-weight="700" class="sans">JPA/ORM &amp; Mobile</text>
+        <text x="10" y="38" fill="#94a3b8" font-size="10.5" font-weight="500" class="sans">Enterprise Patterns</text>
+
+        <line x1="10" y1="48" x2="130" y2="48" stroke="#1e293b" stroke-width="1" />
+
+        <text x="10" y="66" fill="#64748b" font-size="9" font-weight="700" class="mono">KEY TOPICS:</text>
+        <text x="10" y="82" fill="#cbd5e1" font-size="10" class="sans">• JPA / Hibernate ORM</text>
+        <text x="10" y="98" fill="#cbd5e1" font-size="10" class="sans">• MySQL Integrations</text>
+        <text x="10" y="114" fill="#cbd5e1" font-size="10" class="sans">• Dart &amp; Mobile PDM</text>
+        <text x="10" y="130" fill="#cbd5e1" font-size="10" class="sans">• Vanilla JS &amp; DOM</text>
+
+        <rect x="8" y="146" width="124" height="24" rx="4" fill="#1e293b" fill-opacity="0.6" />
+        <text x="70" y="162" fill="#c4b5fd" font-size="9" font-weight="600" text-anchor="middle" class="mono">JPA Carro / Aluno</text>
+      </g>
+    </g>
+
+    <!-- ==================== STAGE 4: 2025 Q3 - 2026 Q1 ==================== -->
+    <g transform="translate(550, 0)">
+      <!-- Node -->
+      <circle cx="0" cy="0" r="16" fill="url(#nodeGlow4)" />
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#a855f7" stroke-width="3" />
+      <circle cx="0" cy="0" r="3" fill="#a855f7" />
+
+      <!-- Top Date Card -->
+      <rect x="-65" y="-56" width="130" height="24" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1" stroke-opacity="0.8" />
+      <text x="0" y="-40" fill="#e9d5ff" font-size="10" font-weight="700" text-anchor="middle" class="mono">JUL 2025 — MAR 2026</text>
+
+      <!-- Bottom Details Card -->
+      <g transform="translate(-70, 24)">
+        <rect x="0" y="0" width="140" height="185" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" />
+        <rect x="0" y="0" width="140" height="3" rx="1.5" fill="#a855f7" />
+
+        <text x="10" y="22" fill="#e2e8f0" font-size="12" font-weight="700" class="sans">Modern Web &amp; .NET</text>
+        <text x="10" y="38" fill="#94a3b8" font-size="10.5" font-weight="500" class="sans">APIs &amp; Design Systems</text>
+
+        <line x1="10" y1="48" x2="130" y2="48" stroke="#1e293b" stroke-width="1" />
+
+        <text x="10" y="66" fill="#64748b" font-size="9" font-weight="700" class="mono">KEY TOPICS:</text>
+        <text x="10" y="82" fill="#cbd5e1" font-size="10" class="sans">• C# .NET 10 Web API</text>
+        <text x="10" y="98" fill="#cbd5e1" font-size="10" class="sans">• EF Core + Npgsql</text>
+        <text x="10" y="114" fill="#cbd5e1" font-size="10" class="sans">• Next.js &amp; TypeScript</text>
+        <text x="10" y="130" fill="#cbd5e1" font-size="10" class="sans">• Tailwind CSS UI</text>
+
+        <rect x="8" y="146" width="124" height="24" rx="4" fill="#1e293b" fill-opacity="0.6" />
+        <text x="70" y="162" fill="#e9d5ff" font-size="9" font-weight="600" text-anchor="middle" class="mono">cadastroDotNet</text>
+      </g>
+    </g>
+
+    <!-- ==================== STAGE 5: 2026 Q2 - PRESENT (PRODUCTION) ==================== -->
+    <g transform="translate(720, 0)">
+      <!-- Animated Active Node -->
+      <circle cx="0" cy="0" r="16" fill="url(#nodeGlow5)" class="node-pulse-5" />
+      <circle cx="0" cy="0" r="8" fill="#0f172a" stroke="#ec4899" stroke-width="3" />
+      <circle cx="0" cy="0" r="3" fill="#ec4899" />
+
+      <!-- Top Date Card (Active Glow) -->
+      <rect x="-65" y="-56" width="130" height="24" rx="6" fill="#2e1065" stroke="#ec4899" stroke-width="1.2" />
+      <text x="0" y="-40" fill="#f472b6" font-size="10" font-weight="700" text-anchor="middle" class="mono">2026 // PRODUCTION</text>
+
+      <!-- Bottom Details Card -->
+      <g transform="translate(-70, 24)">
+        <rect x="0" y="0" width="140" height="185" rx="8" fill="#110d24" stroke="#4c1d95" stroke-width="1.2" />
+        <rect x="0" y="0" width="140" height="3" rx="1.5" fill="#ec4899" />
+
+        <text x="10" y="22" fill="#fdf2f8" font-size="12" font-weight="700" class="sans">Production Apps</text>
+        <text x="10" y="38" fill="#f472b6" font-size="10.5" font-weight="500" class="sans">Cloud &amp; Applied AI</text>
+
+        <line x1="10" y1="48" x2="130" y2="48" stroke="#4c1d95" stroke-width="1" />
+
+        <text x="10" y="66" fill="#f472b6" font-size="9" font-weight="700" class="mono">LIVE DEPLOYS:</text>
+        <text x="10" y="82" fill="#cbd5e1" font-size="10" class="sans">• App Finanças (3NF)</text>
+        <text x="10" y="98" fill="#cbd5e1" font-size="10" class="sans">• Neon DB + Upstash</text>
+        <text x="10" y="114" fill="#cbd5e1" font-size="10" class="sans">• Sentinela Antifraude</text>
+        <text x="10" y="130" fill="#cbd5e1" font-size="10" class="sans">• AI Agent Orch (Flask)</text>
+
+        <rect x="8" y="146" width="124" height="24" rx="4" fill="#4c1d95" fill-opacity="0.8" />
+        <text x="70" y="162" fill="#fdf2f8" font-size="9" font-weight="700" text-anchor="middle" class="mono">🚀 Vercel &amp; Render</text>
+      </g>
+    </g>
+  </g>
+</svg>
